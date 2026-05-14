@@ -1,0 +1,4 @@
+Model,Global r,Global p,Local r,Local p
+Logistic Regression,0.9615,0.0000,0.6264,0.0220
+Random Forest,0.9945,0.0000,0.9560,0.0000
+XGBoost,0.9341,0.0000,0.9011,0.0000
