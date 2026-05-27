@@ -7,7 +7,7 @@ import shap
 import lime
 import lime.lime_tabular
 
-from setup import X_train, X_test, y_train, y_test, RANDOM_STATE
+from data_preparation import FEATURE_COLUMNS, RANDOM_STATE, prepare_data
 
 MODEL_DIR = "Models"
 
@@ -35,6 +35,12 @@ def load_models():
     scaler = joblib.load("scaler.pkl")
     return lr, rf, xgb, dt, scaler
 
+
+@st.cache_data(show_spinner=False)
+def load_prepared_data():
+    return prepare_data(save_scaler=False, verbose=False)
+
+
 lr_model, rf_model, xgb_model, dt_model, scaler = load_models()
 
 models = {
@@ -44,7 +50,7 @@ models = {
     "Decision Tree":       dt_model,
 }
 
-feature_names = list(X_train.columns)
+feature_names = FEATURE_COLUMNS
 
 # -------------------------------
 # 2. Plain English Helper
@@ -216,6 +222,9 @@ if run_button:
     if not selected_models:
         st.warning("Please select at least one model.")
         st.stop()
+
+    prepared_data = load_prepared_data()
+    X_train = prepared_data["X_train"]
 
     st.header("Prediction Results")
 

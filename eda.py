@@ -1,7 +1,10 @@
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-from setup import df
+from data_preparation import prepare_data
+
+data = prepare_data(save_scaler=False)
+df = data["df"]
 
 # -------------------------------
 # 0. Setup

@@ -5,7 +5,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 
-from setup import X_train, X_test, y_train, y_test, RANDOM_STATE
+from data_preparation import RANDOM_STATE, prepare_data
+
+data = prepare_data()
+X_train = data["X_train"]
+X_test = data["X_test"]
+y_train = data["y_train"]
+y_test = data["y_test"]
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score, GridSearchCV

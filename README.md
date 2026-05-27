@@ -1,60 +1,56 @@
-# FYP Heart Disease XAI Project (Quick Run Guide)
+# FYP Heart Disease XAI Project
 
-This is a quick setup guide for the final project so anyone can run the project locally.
+This project is a heart disease prediction and explainability artefact. It trains several machine learning models on the Cleveland heart disease dataset and provides a Streamlit dashboard for patient-level prediction with SHAP and LIME explanations.
 
-## 1. Requirements
+## Requirements
 
-- Python 3.10+ recommended
-- `pip`
+- Python 3.10 or newer
+- pip
 
-## 2. Create and activate a virtual environment
+## Setup
 
-### Windows (PowerShell)
+Create a virtual environment from a working Python installation:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-### macOS / Linux
+If `python` is not recognised, install Python from python.org and tick **Add Python to PATH** during installation.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
+## Main Workflow
+
+Train all models and generate the consolidated performance table:
+
+```powershell
+python train_models.py
 ```
 
-## 3. Install packages
+This saves trained models to `Models/` and writes:
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn joblib shap lime xgboost scipy streamlit
+```text
+Models/training_results.csv
 ```
 
-## 4. Run in this order
+Start the dashboard:
 
-From the project root, run:
+```powershell
+streamlit run app.py
+```
 
-```bash
+The dashboard allows a user to enter patient data, compare model predictions, and view plain-English, SHAP, LIME, and decision-tree explanations.
+
+## Optional Individual Scripts
+
+These scripts can still be run individually if separate figures or analysis outputs are needed:
+
+```powershell
 python LogisticRegression.py
 python RandomForest.py
 python decision_tree.py
 python xgboost_model.py
-```
-
-These scripts train models and save `.pkl` files.
-
-## 5. Start the dashboard
-
-```bash
-streamlit run app.py
-```
-
-Open the local URL shown in terminal (usually `http://localhost:8501`).
-
-## 6. Optional analysis scripts
-
-Run these only if you want extra figures/reports:
-
-```bash
 python eda.py
 python shap_analysis.py
 python lime_analysis.py
@@ -62,10 +58,15 @@ python shap_comparison.py
 python xai_comparison.py
 ```
 
-## Quick troubleshooting
+For normal use, `train_models.py` and `app.py` are the recommended route.
 
-- If `streamlit` command is not found, run:
+## Outputs
 
-```bash
-python -m streamlit run app.py
-```
+- `Models/*.pkl` - trained models
+- `scaler.pkl` - fitted scaler for Logistic Regression
+- `Models/training_results.csv` - model evaluation summary
+- `Figures/` - EDA, model evaluation, SHAP, LIME, and XAI comparison figures
+
+## Disclaimer
+
+This artefact is for academic demonstration only. It is not a clinical diagnostic tool and should not be used to make medical decisions without professional validation.

@@ -5,7 +5,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 
-from setup import X_train, X_test, y_train, y_test, X_train_scaled, X_test_scaled, RANDOM_STATE
+from data_preparation import RANDOM_STATE, prepare_data
+
+data = prepare_data()
+X_train = data["X_train"]
+X_test = data["X_test"]
+y_train = data["y_train"]
+y_test = data["y_test"]
+X_train_scaled = data["X_train_scaled"]
+X_test_scaled = data["X_test_scaled"]
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score

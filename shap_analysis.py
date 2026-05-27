@@ -4,7 +4,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import shap
 
-from setup import X_train, X_test, y_train, y_test, RANDOM_STATE
+from data_preparation import RANDOM_STATE, prepare_data
+
+data = prepare_data(save_scaler=False)
+X_train = data["X_train"]
+X_test = data["X_test"]
+y_train = data["y_train"]
+y_test = data["y_test"]
 
 # -------------------------------
 # 0. Setup
