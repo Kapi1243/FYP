@@ -149,7 +149,9 @@ This system is an academic research artefact. It has not been clinically validat
 
 ## Ethics paper
 
-A companion 5,000-word ethics paper examines the implications of deploying XAI systems in healthcare, including the risks of over-reliance on post-hoc explanations, the gap between model behaviour and medical causality, and the importance of user testing with clinicians before clinical adoption.
+A companion 1,500-word ethics paper examines the implications of deploying XAI systems in healthcare, including the risks of over-reliance on post-hoc explanations, the gap between model behaviour and medical causality, and the importance of user testing with clinicians before clinical adoption.
+
+[Read the ethics paper (PDF)](./ethics_paper.pdf)
 
 ---
 
