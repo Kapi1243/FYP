@@ -8,6 +8,12 @@ Built as a BSc dissertation at Bournemouth University (2025/2026), supervised by
 
 ---
 
+## Why it matters
+
+Explanation methods like SHAP and LIME are increasingly cited in clinical AI literature, yet their consistency is rarely empirically tested. If two explanation methods agree globally but diverge for individual patients, the safety implications are significant — and largely unexamined.
+
+---
+
 ## Research questions
 
 **RQ1** — Do different machine learning models produce consistent feature importance rankings when analysed using SHAP?
@@ -18,7 +24,7 @@ Built as a BSc dissertation at Bournemouth University (2025/2026), supervised by
 
 ---
 
-## Key findings
+## Research Findings & Implications
 
 **On model performance:**
 Logistic Regression achieved the highest ROC-AUC (0.9498), while XGBoost achieved the strongest fixed-threshold classification performance (accuracy 0.85, F1 0.8302). This suggests that simpler, more interpretable models remain competitive with ensemble methods on this dataset — explainability does not require sacrificing predictive power.
