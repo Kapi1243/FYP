@@ -153,6 +153,11 @@ This system is an academic research artefact. It has not been clinically validat
 
 ---
 
+## Dissertation / Research Paper
+
+[Read the full dissertation (PDF)](./Individual Project 40 Credit - Kacper Kowalski.pdf)
+---
+
 ## Ethics paper
 
 A companion 1,500-word ethics paper examines the implications of deploying XAI systems in healthcare, including the risks of over-reliance on post-hoc explanations, the gap between model behaviour and medical causality, and the importance of user testing with clinicians before clinical adoption.
