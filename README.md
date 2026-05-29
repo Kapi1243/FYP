@@ -156,6 +156,7 @@ This system is an academic research artefact. It has not been clinically validat
 ## Dissertation / Research Paper
 
 [Read the full dissertation (PDF)](./Individual%20Project%2040%20Credit%20-%20Kacper%20Kowalski.pdf)
+
 ---
 
 ## Ethics paper
