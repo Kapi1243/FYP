@@ -1,5 +1,5 @@
 Link to Dashboard:
-[Dashboard]((https://mjwcwwryfxyy8wsqiandcg.streamlit.app/))
+[Dashboard](https://mjwcwwryfxyy8wsqiandcg.streamlit.app/)
 
 
 # Heart Disease Prediction and Explainability
